@@ -11,6 +11,35 @@
 <body>
     <div class="container mt-5">
         <h1 class="text-center mb-4">99乘法表</h1>
+        
+        <!-- 模式選擇和控制按鈕 -->
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary active" id="viewMode">檢視模式</button>
+                        <button type="button" class="btn btn-primary" id="practiceMode">練習模式</button>
+                    </div>
+                    <div id="timerDisplay" class="d-none">
+                        時間：<span id="timer">00:00</span>
+                    </div>
+                    <button type="button" class="btn btn-success d-none" id="startPractice">開始練習</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 練習模式的分數顯示 -->
+        <div class="row mb-3">
+            <div class="col-md-8 mx-auto">
+                <div id="scoreDisplay" class="alert alert-info d-none">
+                    答對：<span id="correctCount">0</span> | 
+                    答錯：<span id="wrongCount">0</span> |
+                    進度：<span id="progress">0</span>/10
+                </div>
+            </div>
+        </div>
+
+        <!-- 乘法表/練習區域 -->
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <div class="table-container" id="multiplicationTable">
